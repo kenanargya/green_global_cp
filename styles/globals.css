@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --brand-from: #16a34a;
+  --brand-to: #84cc16;
+}
+
+@layer base {
+  html, body, #__next { height: 100%; }
+  body { @apply text-gray-800 bg-white; font-family: theme('fontFamily.sans'); }
+  h1,h2,h3 { font-family: theme('fontFamily.heading'); }
+  a:focus { outline: 2px solid rgba(34,197,94,0.25); outline-offset: 2px; }
+}
+
+@layer utilities {
+  .brand-gradient { background-image: linear-gradient(90deg,var(--brand-from),var(--brand-to)); }
+}
+
+/* small helper animations used across the site */
+.animate-fade-in { animation: fade-in 420ms ease-out both; }
+.animate-slide-in-left { animation: slide-in-left 460ms ease-out both; }
+.animate-slide-in-right { animation: slide-in-right 460ms ease-out both; }
