@@ -6,22 +6,22 @@ Setup
 
 1. Install dependencies
 
-   npm install
+   `npm install`
 
 2. Create .env from `.env.example` and set `DATABASE_URL`, `NEXTAUTH_SECRET`, `NEXTAUTH_URL`
 
 3. Run Prisma migrate and generate client
 
-   npx prisma migrate dev --name init
-   npx prisma generate
+    `npx prisma migrate dev --name init
+   npx prisma generate`
 
 4. Seed database
 
-   node prisma/seed.ts
+   `node prisma/seed.ts`
 
 5. Run dev server
 
-   npm run dev
+   `npm run dev`
 
 Deploy
 
